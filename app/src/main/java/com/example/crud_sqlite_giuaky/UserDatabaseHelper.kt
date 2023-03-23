@@ -6,7 +6,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class StudentDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
+class UserDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
 
     companion object{
         private const val DATABASE_VERSION = 1
@@ -30,17 +30,17 @@ class StudentDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
 
 
     @SuppressLint("Range")
-    fun getAllStudent(): ArrayList<Student>{
-        var studentList = ArrayList<Student>()
+    fun getAllStudent(): ArrayList<UserModal>{
+        var studentList = ArrayList<UserModal>()
         val db = writableDatabase
         val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
         if (cursor.moveToFirst()){
             do{
-                val student = Student()
-                student.id = cursor.getInt(cursor.getColumnIndex(C_ID))
-                student.name = cursor.getString(cursor.getColumnIndex(C_NAME))
-                student.email = cursor.getString(cursor.getColumnIndex(C_EMAIL))
-                studentList.add(student)
+                val userModal = UserModal()
+                userModal.id = cursor.getInt(cursor.getColumnIndex(C_ID))
+                userModal.name = cursor.getString(cursor.getColumnIndex(C_NAME))
+                userModal.email = cursor.getString(cursor.getColumnIndex(C_EMAIL))
+                studentList.add(userModal)
             }while (cursor.moveToNext())
         }
         db.close()
@@ -49,17 +49,17 @@ class StudentDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
     }
 
     @SuppressLint("Range")
-    fun getStudentByID(id: Int): Student{
-        val student = Student()
+    fun getStudentByID(id: Int): UserModal{
+        val userModal = UserModal()
         val db = writableDatabase
         val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME WHERE $C_ID = $id", null)
         cursor?.moveToFirst()
-        student.id = id
-        student.name = cursor.getString(cursor.getColumnIndex(C_NAME))
-        student.email = cursor.getString(cursor.getColumnIndex(C_EMAIL))
+        userModal.id = id
+        userModal.name = cursor.getString(cursor.getColumnIndex(C_NAME))
+        userModal.email = cursor.getString(cursor.getColumnIndex(C_EMAIL))
         cursor.close()
         db.close()
-        return student
+        return userModal
 
     }
 
@@ -81,14 +81,14 @@ class StudentDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
         db.close()
     }
 
-    fun updateStudent(student: Student){
+    fun updateStudent(userModal: UserModal){
         val db = this.writableDatabase
         val values = ContentValues()
-        values.put(C_ID, student.id)
-        values.put(C_NAME, student.name)
-        values.put(C_EMAIL, student.email)
-        values.put(C_PASS, student.password)
-        db.update(TABLE_NAME, values, C_ID + "=?", arrayOf(student.id.toString()))
+        values.put(C_ID, userModal.id)
+        values.put(C_NAME, userModal.name)
+        values.put(C_EMAIL, userModal.email)
+        values.put(C_PASS, userModal.password)
+        db.update(TABLE_NAME, values, C_ID + "=?", arrayOf(userModal.id.toString()))
         db.close()
 
     }

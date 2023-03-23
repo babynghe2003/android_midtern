@@ -4,14 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_add_student.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_add_user.*
 
-class AddStudentActivity : AppCompatActivity() {
+class AddUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val dbHelper = StudentDatabaseHelper(this)
+        val dbHelper = UserDatabaseHelper(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_student)
+        setContentView(R.layout.activity_add_user)
         print("Dang ky")
         save_button.setOnClickListener{
             print("Dang ki")

@@ -3,13 +3,13 @@ package com.example.crud_sqlite_giuaky
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_update_student.*
+import kotlinx.android.synthetic.main.activity_update_user.*
 
-class UpdateStudentActivity : AppCompatActivity() {
+class UpdateUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val dbHelper = StudentDatabaseHelper(this)
+        val dbHelper = UserDatabaseHelper(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update_student)
+        setContentView(R.layout.activity_update_user)
         val studentID = intent.getIntExtra("student_id", -1)
         val student = dbHelper.getStudentByID(studentID.toInt())
         new_student_name.setText(student.name)

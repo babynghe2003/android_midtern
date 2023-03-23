@@ -16,10 +16,10 @@
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".UpdateStudentActivity"
+            android:name=".UpdateUserActivity"
             android:exported="false" />
         <activity
-            android:name=".AddStudentActivity"
+            android:name=".AddUserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
