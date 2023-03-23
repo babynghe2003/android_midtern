@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:contentPadding="3dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_person"
+            android:id="@+id/rPersonImage"
+            />
+
+        <LinearLayout
+            android:id="@+id/infor_user"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/rPersonImage"
+            android:layout_toRightOf="@id/rPersonImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="person name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/email_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="person age"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@id/infor_user"
+            android:layout_toRightOf="@id/infor_user"
+            android:src="@drawable/ic_action_more"
+            android:id="@+id/more_button"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
