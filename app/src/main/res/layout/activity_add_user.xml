@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/display_text"
-        android:text="Đăng ký"
+        android:text="Tao mat hang"
         android:gravity="center"
         android:textSize="25sp"
         android:textColor="@color/black"
@@ -38,7 +38,7 @@
         android:background="@drawable/background"
         android:padding="10dp"
         android:layout_below="@id/student_name"
-        android:hint="Nhập email"
+        android:hint="Nhập loại sản phẩm"
         />
     <EditText
         android:layout_width="match_parent"
@@ -49,8 +49,7 @@
         android:background="@drawable/background"
         android:padding="10dp"
         android:layout_below="@id/student_email"
-        android:hint="Nhập mât khẩu"
-        android:inputType="textPassword"
+        android:hint="Nhập gias "
         />
     <EditText
         android:layout_width="match_parent"
@@ -61,9 +60,7 @@
         android:background="@drawable/background"
         android:padding="10dp"
         android:layout_below="@id/student_password"
-        android:hint="Nhập lại mật khẩu"
-        android:inputType="textPassword"
-
+        android:hint="Nhập link anh "
         />
     <Button
         android:layout_width="wrap_content"
@@ -71,7 +68,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/student_repassword"
-        android:text="Đăng ký"
+        android:text="Tao mat hang"
         android:id="@+id/save_button"
         android:paddingHorizontal="25dp"
         android:backgroundTint="@color/teal_200"

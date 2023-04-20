@@ -16,6 +16,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/ic_action_person"
             android:id="@+id/rPersonImage"
+            android:layout_marginRight="16dp"
             />
 
         <LinearLayout
@@ -32,14 +33,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="person name"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/email_textview"
+                android:id="@+id/type_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="person age"
                 android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/cost_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="person age"
+                android:textAlignment="viewEnd"
+                android:textSize="18sp"
+                android:textColor="@color/red" />
         </LinearLayout>
         <ImageView
             android:layout_width="70dp"

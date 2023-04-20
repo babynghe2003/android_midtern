@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "594891278713",
+    "project_id": "fbtest-af005",
+    "storage_bucket": "fbtest-af005.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594891278713:android:091ba0eb49da684d73c7a8",
+        "android_client_info": {
+          "package_name": "com.example.crud_sqlite_giuaky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594891278713-h4lqnmn9nuglc9j6je0nqufct6gmt3s2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg4D7dlpV2btpYanj94KQdDA047l9yrhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594891278713-h4lqnmn9nuglc9j6je0nqufct6gmt3s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
